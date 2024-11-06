@@ -4,6 +4,8 @@ import MainContent from './MainContent';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import './App.css';
+import axios from 'axios';
+
 
 const App = () => {
   const [images, setImages] = useState([]);

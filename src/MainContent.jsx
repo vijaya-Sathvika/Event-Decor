@@ -1,7 +1,17 @@
 import React, { useState, useEffect } from 'react';
+// import axios from 'axios';
 import './MainContent.css';
 
 const MainContent = ({ images, loading, selectedCategory, onCategorySelect }) => {
+  //api dosn't fetch images
+  // const fetchImagesFromServer = async () => {
+  //   try {
+  //     const response = await axios.get('http://localhost:8081/api/example');
+  //     console.log('Server Response:', response.data);
+  //     // Use the response data as needed
+  //   } catch (error) {
+  //     console.error('Error fetching data from server:', error);
+  //   }
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -27,6 +37,10 @@ const MainContent = ({ images, loading, selectedCategory, onCategorySelect }) =>
     { name: 'Baby Shower', image: 'https://takerentpe.com/media/images/products/2024/01/Untitled_design_1_PdSY3x91.webp' },
     { name: 'Festivals', image: 'https://media.designcafe.com/wp-content/uploads/2020/09/21140648/festival-decoration-ideas-at-home.jpg' }
   ];
+
+  // useEffect(() => {
+  //   fetchImagesFromServer();
+  // }, []);
 
   useEffect(() => {
     const slideInterval = setInterval(() => {
@@ -103,5 +117,5 @@ const MainContent = ({ images, loading, selectedCategory, onCategorySelect }) =>
     </main>
   );
 };
-
+// };
 export default MainContent;
